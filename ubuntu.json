@@ -1,0 +1,39 @@
+{
+    "builders": [{
+      "type": "azure-arm",
+  
+      "subscription_id": "d1addcf4-58e9-42bb-9ada-56275ac8631b",
+      "use_azure_cli_auth" : "true",
+      "managed_image_resource_group_name": "myResourceGroup",
+      "managed_image_name": "myPackerImage",
+  
+      "os_type": "Linux",
+      "image_publisher": "Canonical",
+      "image_offer": "UbuntuServer",
+      "image_sku": "18.04-LTS",
+  
+      "azure_tags": {
+          "dept": "Engineering",
+          "task": "Image deployment"
+      },
+  
+      "location": "francecentral",
+      "vm_size": "standard_B1s"
+    }],
+    "provisioners": [
+        {
+          "type": "ansible",
+          "playbook_file": "./playbook.yml"
+        }],
+    "post-processors": [
+            {
+              "type": "manifest",
+              "output": "manifest.json",
+              "strip_path": true,
+              "custom_data": {
+                "my_custom_data": "example"
+              }
+            }
+          ]
+        }
+        

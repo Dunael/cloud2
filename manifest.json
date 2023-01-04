@@ -1,0 +1,27 @@
+{
+  "builds": [
+    {
+      "name": "azure-arm",
+      "builder_type": "azure-arm",
+      "build_time": 1670596056,
+      "files": null,
+      "artifact_id": "/subscriptions/d1addcf4-58e9-42bb-9ada-56275ac8631b/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/myPackerImage",
+      "packer_run_uuid": "0a1f723f-f6a5-eebd-34df-47427c993222",
+      "custom_data": {
+        "my_custom_data": "example"
+      }
+    },
+    {
+      "name": "azure-arm",
+      "builder_type": "azure-arm",
+      "build_time": 1672648084,
+      "files": null,
+      "artifact_id": "/subscriptions/d1addcf4-58e9-42bb-9ada-56275ac8631b/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/myPackerImage",
+      "packer_run_uuid": "584fb806-6548-693d-1fd0-6c6f995b280d",
+      "custom_data": {
+        "my_custom_data": "example"
+      }
+    }
+  ],
+  "last_run_uuid": "584fb806-6548-693d-1fd0-6c6f995b280d"
+}

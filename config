@@ -1,0 +1,4 @@
+host myVM
+        hostname ADRESSE_IP_PUBLIQUE
+        user azureuser
+        IdentityFile ~/.ssh/id_rsa
