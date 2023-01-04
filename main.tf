@@ -119,7 +119,7 @@ output "image_id" {
 
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
-  name                  = "myVM"
+  name                  = "${AMI_ID}"
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.my_terraform_nic.id]
